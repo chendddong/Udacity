@@ -1,14 +1,35 @@
+# -*- coding: utf-8 -*-
 import webbrowser
 import subprocess
 import time
+import os
 
-total_breaks = 3;
+total_breaks = 24;
 break_count = 0;
+
+#The notifier function
+def notify(title, subtitle, message, icon):
+    t = '-title {!r}'.format(title)
+    s = '-subtitle {!r}'.format(subtitle)
+    m = '-message {!r}'.format(message)
+    i = '-icon {!r}'.format(icon)
+    os.system('terminal-notifier {}'.format(' '.join([m, t, s, i])))
+
+# Calling the function
+notify(title    = 'Break Alert',
+       subtitle = 'from QuanQuan',
+       message  = 'Chen Dang, It is time for a break!',
+       icon = '/Users/Peter/Desktop/bob.png')   
+
+                 
 
 print("This is program started on" + time.ctime())
 while (break_count < total_breaks):
     print("This is start of the loop")
-    time.sleep(10)
     webbrowser.open("https://www.youtube.com/watch?v=q0FylXxDGII")
-    subprocess.call(["/usr/bin/open", "-W", "-n", "-a", "/Applications/ITunes.app"])
+    time.sleep(60*60)
+    #subprocess.call(["/usr/bin/open", "-W", "-n", "-a", "/Applications/ITunes.app"])
     break_count += 1
+
+
+
