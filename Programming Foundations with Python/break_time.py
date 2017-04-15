@@ -18,23 +18,23 @@ def notify(title, subtitle, message, icon):
     i = '-icon {!r}'.format(icon)
     os.system('terminal-notifier {}'.format(' '.join([m, t, s, i])))
 
- 
-
-                 
 
 print("This is program started on" + time.ctime())
 while (break_count < total_breaks):
-    print("This is start of the loop")
     # Calling the function
     notify(title    = 'Break Alert',
            subtitle = 'from QuanQuan',
            message  = 'Chen Dang, It is time for a break!',
            icon = '/Users/Peter/Desktop/bob.png')  
+    print("This is the start of the break --- " + time.ctime())
+    print("")
     webbrowser.open("https://www.youtube.com/watch?v=q0FylXxDGII")
-    time.sleep(10*60)
+    time.sleep(10 * 60)
     img = Image.open('/Users/Peter/Desktop/bob.jpg')
     img.show()
-    time.sleep(60*60)
+    print("This is the start of the work --- " + time.ctime())
+    print("")
+    time.sleep(60 * 60)
     #subprocess.call(["/usr/bin/open", "-W", "-n", "-a", "/Applications/ITunes.app"])
     break_count += 1
 
