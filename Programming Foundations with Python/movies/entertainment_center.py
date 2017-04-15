@@ -42,4 +42,12 @@ th3 = media.Movie("6",
 				"https://www.youtube.com/watch?v=iVAgTiBrrDA")
 
 movies = [tlotr1, tlotr2, tlotr3, th1, th2, th3]
-fresh_tomatoes.open_movies_page(movies)
+# fresh_tomatoes.open_movies_page(movies)
+# print(media.Movie.VALID_RATINGS)
+print(media.Movie.__doc__)
+print("")
+print(media.Movie.__name__)
+print("")
+print(media.Movie.__module__)
+print("")
+
