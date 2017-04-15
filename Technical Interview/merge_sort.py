@@ -41,7 +41,7 @@ def merge(nums, start, mid, end, temp):
 
 # test for the method
 
-nums1 = [51, 38, 49, 27, 62, 05, 16, -14, 55]
+nums1 = [51, 38, 49, 27, 62, 5, 16, -14, 55]
 temp = [0] * (len(nums1))
 merge_sort(nums1, 0, len(nums1) - 1, temp)
 
