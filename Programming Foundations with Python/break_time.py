@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
+from PIL import Image
 import webbrowser
 import subprocess
 import time
 import os
+
+
 
 total_breaks = 24;
 break_count = 0;
@@ -28,7 +31,10 @@ while (break_count < total_breaks):
            message  = 'Chen Dang, It is time for a break!',
            icon = '/Users/Peter/Desktop/bob.png')  
     webbrowser.open("https://www.youtube.com/watch?v=q0FylXxDGII")
-    time.sleep(10)
+    time.sleep(10*60)
+    img = Image.open('/Users/Peter/Desktop/bob.jpg')
+    img.show()
+    time.sleep(60*60)
     #subprocess.call(["/usr/bin/open", "-W", "-n", "-a", "/Applications/ITunes.app"])
     break_count += 1
 
