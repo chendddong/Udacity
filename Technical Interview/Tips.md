@@ -50,4 +50,6 @@ We chose to work with Pramp because it felt most aligned with the Udacity commun
 We recommend that you complete at least three interviews with Pramp as you prepare for your interview. 
 
 
-* [Other useful materials](https://classroom.udacity.com/courses/ud513/lessons/7707710408/concepts/79621434400923)
+
+
+[Other useful materials](https://classroom.udacity.com/courses/ud513/lessons/7707710408/concepts/79621434400923)
