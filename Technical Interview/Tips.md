@@ -53,3 +53,5 @@ We recommend that you complete at least three interviews with Pramp as you prepa
 
 
 [Other useful materials](https://classroom.udacity.com/courses/ud513/lessons/7707710408/concepts/79621434400923)
+
+[5 aspects we should know](https://sites.google.com/site/steveyegge2/five-essential-phone-screen-questions)
