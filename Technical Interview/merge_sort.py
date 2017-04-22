@@ -40,6 +40,7 @@ def merge(nums, start, mid, end, temp):
 
 
 # test for the method
+# yep
 
 nums1 = [51, 38, 49, 27, 62, 5, 16, -14, 55]
 temp = [0] * (len(nums1))
