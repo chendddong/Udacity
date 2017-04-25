@@ -24,4 +24,6 @@ specific commit.
 
 ### Show the commits made in this repository, starting with the most recent.
 
-**git log** will do this. It doesn't take any arguments.
+**git log** will do this.
+
+
