@@ -12,8 +12,6 @@ What value do you think it offers?
 
 How can you use the staging area to make sure you have one commit per logical
 change?
-	Just by comparing the staged file and the edited file and make sure they can for
-	a logical change.
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
