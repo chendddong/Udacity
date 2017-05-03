@@ -7,7 +7,7 @@ import os
 
 
 
-total_breaks = 24;
+total_breaks = 48;
 break_count = 0;
 
 #The notifier function
@@ -20,23 +20,25 @@ def notify(title, subtitle, message, icon):
 
 
 print("This is program started on" + time.ctime())
-while (break_count < total_breaks):
+while (True):
     # Calling the function
     notify(title    = 'Break Alert',
-           subtitle = 'from QuanQuan',
-           message  = 'Chen Dang, It is time for a break!',
-           icon = '/Users/Peter/Desktop/bob.png')  
+           subtitle = 'from CunCun',
+           message  = 'Nan Lei, It is time for a break!',
+           icon = '/Users/Peter/Desktop/IMG_0085.JPG')  
     print("This is the start of the break --- " + time.ctime())
     print("")
     webbrowser.open("https://www.youtube.com/watch?v=q0FylXxDGII")
-    time.sleep(10 * 60)
-    img = Image.open('/Users/Peter/Desktop/bob.jpg')
+    # break time
+    time.sleep(8*60)
+    img = Image.open('/Users/Peter/Desktop/IMG_0085.JPG')
     img.show()
     print("This is the start of the work --- " + time.ctime())
     print("")
-    time.sleep(60 * 60)
+    # work time
+    time.sleep(45*60)
     #subprocess.call(["/usr/bin/open", "-W", "-n", "-a", "/Applications/ITunes.app"])
-    break_count += 1
+    #break_count += 1
 
 
 
