@@ -18,7 +18,8 @@ use one instead of another?
 What is the benefit of having a copy of the last known state of the remote
 stored locally?
 
-    Fill in your answer here
+	You can have a point where when the merge happens it could be used as a anchor to
+	resolve the data lose or the irreversible change.
 
 How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
