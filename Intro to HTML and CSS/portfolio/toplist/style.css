@@ -1,0 +1,26 @@
+.screenshot {
+    max-width: 460px;
+}
+
+.description {
+    max-width: 750px;
+    color: #7C8B88;
+}
+
+.app {
+    display: flex;
+}
+
+
+* {
+   /* outline: 1px solid #ff2121 !important; */
+   /* border: 10px; */
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 5px;
+}
