@@ -18,6 +18,7 @@ p {
   padding: 10px;
   text-align: center;
   margin-top: none;
+  font-weight: 300;
 
 /*  how to use the Overflow
 
@@ -158,6 +159,8 @@ h4 {
   margin: 0 auto;
   text-align: center;
   margin-top: 12px;
+  font-weight: 300;
+
 
 }
 
@@ -177,6 +180,8 @@ a {
   margin: 0 auto;
   text-align: center;
   text-decoration: none;
+  font-weight: 300;
+
 }
 
 
