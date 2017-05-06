@@ -1,0 +1,41 @@
+body {
+    font-family: 'Lato', sans-serif;
+    color: #747704;
+    font-weight: 300;
+}
+
+.container-color {
+    background-color: pink;
+    padding: 0 20px;
+}
+
+.title-super {
+    font-size: 60px;
+}
+
+.logo-size {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.text-muted {
+    color:#BCBBBB;
+}
+
+.text-thin {
+    font-weight: 100;
+}
+
+
+
+.middle-pic-size {
+    width: 1140px;
+    height: 350px;
+}
+
+.work-pic-size {
+    width: 550px;
+    height: 300px;
+}
+
