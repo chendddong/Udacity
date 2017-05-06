@@ -2,6 +2,8 @@
 
 * [Screenshot](https://github.com/chendddong/Udacity/blob/master/Intro%20to%20HTML%20and%20CSS/portfolio/mockup/images/Mockup_page.png)
 
+![Screnshot](https://github.com/chendddong/Udacity/blob/master/Intro%20to%20HTML%20and%20CSS/portfolio/mockup/images/Mockup_page.png)
+
 First project from the Front-End Web Developer Nanodegree in Udacity:
 developed and personalized a responsive website with HTML5 and CSS3, from a provided PDF design mockup.
 
