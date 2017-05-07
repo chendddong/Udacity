@@ -4,8 +4,14 @@ body {
     font-weight: 300;
 }
 
+.togglees {
+    font-family: 'Lato', sans-serif;
+    color: #747704;
+    font-weight: 300;
+}
+
 .container-color {
-    background-color: pink;
+
     padding: 0 20px;
 }
 

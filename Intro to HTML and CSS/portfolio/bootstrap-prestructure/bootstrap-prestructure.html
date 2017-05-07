@@ -8,7 +8,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
-
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </head>
   <body>
     <div class="container container-color">
@@ -38,26 +39,102 @@
       </div>
       <div class="row text-center">
         <div class="col-md-6">
-          <img src="images/Lint.jpg" alt="work pic" class="img-responsive work-pic-size">
+          <img src="images/Lint.jpg" alt="work pic" class="img-responsive work-pic-size" data-toggle="modal" data-target="#p1">
           <h3 class="text-uppercase">LintCode Solution</h3>
           <p><a href="https://github.com/chendddong/LintCode">Link to project</a></p>
         </div>
         <div class="col-md-6">
-          <img src="images/2048.png" alt="work pic" class="img-responsive work-pic-size">
+          <img data-toggle="modal" data-target="#p2" src="images/2048.png" alt="work pic" class="img-responsive work-pic-size">
           <h3 class="text-uppercase">2048-NBA</h3>
           <p><a href="https://github.com/chendddong/2048">Link to project</a></p>
         </div>
       </div>
       <div class="row text-center">
         <div class="col-md-6">
-          <img src="images/U.png" alt="work pic" class="img-responsive work-pic-size">
+          <img data-toggle="modal" data-target="#p3" src="images/U.png" alt="work pic" class="img-responsive work-pic-size">
           <h3 class="text-uppercase">Udacity</h3>
           <p><a href="https://github.com/chendddong/Udacity">Link to project</a></p>
         </div>
         <div class="col-md-6">
-          <img src="images/Doc.jpg" alt="work pic" class="img-responsive work-pic-size">
+          <img data-toggle="modal" data-target="#p4" src="images/Doc.jpg" alt="work pic" class="img-responsive work-pic-size">
           <h3 class="text-uppercase">DocHub</h3>
           <p><a href="https://github.com/chendddong/DocHub">Link to project</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal1 -->
+    <div class="modal fade" id="p1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title text-center togglees" id="myModalLabel">The LintCode Solution</h4>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive togglees" src="images/Lint.jpg">
+              <hr>
+              <p class="text-center togglees">This project contains all my Algorithm solutions on lintCode.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal2 -->
+    <div class="modal fade" id="p2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title text-center togglees" id="myModalLabel">2048-NBA</h4>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive togglees" src="images/2048.png">
+              <hr>
+              <p class="text-center togglees">2048-NBA</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal3 -->
+    <div class="modal fade" id="p3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title text-center togglees" id="myModalLabel">Udacity</h4>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive togglees" src="images/U.png">
+              <hr>
+              <p class="text-center togglees">Courses taken on Udacity</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal4 -->
+    <div class="modal fade" id="p4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title text-center togglees" id="myModalLabel">DocHub</h4>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive togglees" src="images/Doc.jpg">
+              <hr>
+              <p class="text-center togglees">A website for patients and doctors to arrange appointments</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
