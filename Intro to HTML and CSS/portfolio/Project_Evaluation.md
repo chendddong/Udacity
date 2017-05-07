@@ -3,8 +3,7 @@
 This is the rubric that would be used to evaluate your project if you were enrolled in the Front-End Web Developer Nanodegree. Under those circumstances, all criteria must "meet specifications" in order to pass.
 
 # Project Rubric
-![Project Rubric]
-(https://github.com/chendddong/Udacity/blob/master/Intro%20to%20HTML%20and%20CSS/portfolio/Project%20Rubric.png)
+![Project Rubric](https://github.com/chendddong/Udacity/blob/master/Intro%20to%20HTML%20and%20CSS/portfolio/Project%20Rubric.png)
 
 # Style Guidelines
 
