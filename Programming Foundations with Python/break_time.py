@@ -25,18 +25,18 @@ while (True):
     notify(title    = 'Break Alert',
            subtitle = 'from CunCun',
            message  = 'Nan Lei, It is time for a break!',
-           icon = '/Users/Peter/Desktop/IMG_0085.JPG')  
+           icon = '/Users/Peter/Desktop/IMG_0085.JPG')
     print("This is the start of the break --- " + time.ctime())
     print("")
     webbrowser.open("https://www.youtube.com/watch?v=q0FylXxDGII")
     # break time
-    time.sleep(8*60)
+    time.sleep(10*60)
     img = Image.open('/Users/Peter/Desktop/IMG_0085.JPG')
     img.show()
     print("This is the start of the work --- " + time.ctime())
     print("")
     # work time
-    time.sleep(45*60)
+    time.sleep(50*60)
     #subprocess.call(["/usr/bin/open", "-W", "-n", "-a", "/Applications/ITunes.app"])
     #break_count += 1
 
