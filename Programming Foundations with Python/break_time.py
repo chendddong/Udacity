@@ -31,7 +31,7 @@ while (True):
     webbrowser.open("https://www.youtube.com/watch?v=q0FylXxDGII")
     # break time
     time.sleep(10*60)
-    img = Image.open('/Users/Peter/Desktop/IMG_0085.JPG')
+    img = Image.open('/Users/Peter/Pictures/CC.JPG')
     img.show()
     print("This is the start of the work --- " + time.ctime())
     print("")
