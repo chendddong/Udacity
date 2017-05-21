@@ -28,7 +28,8 @@ while (True):
            icon = '/Users/Peter/Desktop/IMG_0085.JPG')
     print("This is the start of the break --- " + time.ctime())
     print("")
-    webbrowser.open("https://www.youtube.com/watch?v=q0FylXxDGII")
+    webbrowser.get("open -a /Applications/Google\ Chrome.app %s").open("https://www.youtube.com")
+    # webbrowser.open("")
     # break time
     time.sleep(10*60)
     img = Image.open('/Users/Peter/Pictures/CC.JPG')
