@@ -31,13 +31,13 @@ while (True):
     webbrowser.get("open -a /Applications/Google\ Chrome.app %s").open("https://www.youtube.com")
     # webbrowser.open("")
     # break time
-    time.sleep(10*60)
+    time.sleep(5*60)
     img = Image.open('/Users/Peter/Pictures/CC.JPG')
     img.show()
     print("This is the start of the work --- " + time.ctime())
     print("")
     # work time
-    time.sleep(50*60)
+    time.sleep(25*60)
     #subprocess.call(["/usr/bin/open", "-W", "-n", "-a", "/Applications/ITunes.app"])
     #break_count += 1
 
