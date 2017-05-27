@@ -1,8 +1,7 @@
-# Udacity
-
-This repo is to have store some codes from Udacity.
-
-**Have Fun tho**
+<p align="center">
+        <img height=130
+        src="https://d125fmws0bore1.cloudfront.net/assets/udacity_share-46db4b8faf075a5af5a1070a7fa0ad3639783609ff45f447e4ea467fe3aa9d32.png">
+</p>
 
 ## Some Projects in those Courses
 
