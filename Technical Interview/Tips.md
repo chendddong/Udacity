@@ -26,10 +26,13 @@
         * when it comes to 'IF', ...I want to check... ...if it is, I am gonna... ...if it is not...
         * when it comes to 'method', ...I am gonna have a plan to help me with that... ...I am gonna call that method...
         * ...The first thing I wanna do is... 
-        * ...the first thing that I can think of of course is the naive double loop or sth like that...
+        * ...the first thing that I can think of of course is the naive double
+        loop or something like that...
 * Debugging
-    * Go through the test cases, first corner ones
-    * Go through the regular ones.
+    * Go through the test cases: 
+        * first small ones
+        * second edge cases
+        * big one
     * vital
 
 
