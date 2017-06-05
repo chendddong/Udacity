@@ -1,220 +1,107 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Brighton Times</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
-    <link rel="stylesheet" type="text/css" href="css/final.css">
-  </head>
-  <body>
+<!DOCTYPE html>
+<html>
+<head>
 
-    <header class="header">
-      <div class="header__inner">
-        <img class="header__logo" src="images/city.png" alt="iconic view of a cityscape">
-        <h1 class="header__title">
-          The Brighton Times
-        </h1>
-        <a id="menu" class="header__menu">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
-          </svg>
-        </a>
-      </div>
-    </header>
+  <meta name="description" content="Udacity Responsive Images course project" />
+  <meta name="author" content="//samdutton.com">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta itemprop="name" content="Udacity Responsive Images course project">
+  <meta itemprop="image" content="images/icon.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta id="theme-color" name="theme-color" content="#307699">
 
-    <nav id="drawer" class="nav">
-      <ul class="nav__list">
-        <li class="nav__item"><a href="#">News</a></li>
-        <li class="nav__item"><a href="#">Events</a></li>
-        <li class="nav__item"><a href="#">Culture</a></li>
-        <li class="nav__item"><a href="#">Blog</a></li>
-      </ul>
-    </nav>
+  <base target="_blank">
 
-    <main>
-      <section class="content">
-        <section class="hero">
-          <article class="description">
-            <h2>Absolutely astonishing breaking news!</h2>
-            <p>Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko. Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko.</p>
-          </article>
-        </section>
+  <title>My responsive blog: picture story</title>
 
-        <section class="news top-news">
-          <h2 class="news__title">Top news <a href="#" class="news__more">+ more</a></h2>
-          <ul>
-            <li class="top-news__item">
-              <a href="#">Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.</a>
-            </li>
-            <li class="top-news__item">
-              <a href="#">Squid lomo Kickstarter art lomo Kickstarter art party cronut scenester.</a>
-            </li>
-            <li class="top-news__item">
-              <a href="#">Organic raw denim lomo Kickstarter art Vice keffiyeh four loko.</a>
-            </li>
-            <li class="top-news__item">
-              <a href="#">Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko.</a>
-            </li>
-          </ul>
-        </section>
+  <link rel="icon" sizes="192x192" href="/images/icon.png">
+  <link rel="stylesheet" href="css/main.css" />
 
-        <section class="scores">
-          <table class="scores__table">
-            <thead>
-              <tr>
-                <th>date</th>
-                <th class="scores__location">location</th>
-                <th>team</th>
-                <th colspan="2">score</th>
-                <th>team</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Friday</td>
-                <td class="scores__location">Brighton</td>
-                <td>Bears</td>
-                <td>95</td>
-                <td class="winner">109</td>
-                <td class="winner">Cubs</td>
-              </tr>
-              <tr>
-                <td>Friday</td>
-                <td class="scores__location">Worthington</td>
-                <td class="winner">Otters</td>
-                <td class="winner">3</td>
-                <td>1</td>
-                <td>Cubs</td>
-              </tr>
-              <tr>
-                <td>Saturday</td>
-                <td class="scores__location">Littlehampton</td>
-                <td class="winner">Wolves</td>
-                <td class="winner">7</td>
-                <td>0</td>
-                <td>Panthers</td>
-              </tr>
-              <tr>
-                <td>Sunday</td>
-                <td class="scores__location">Portslade</td>
-                <td>Hawks</td>
-                <td>11</td>
-                <td class="winner">12</td>
-                <td class="winner">Capons</td>
-              </tr>
-              <tr>
-                <td>Sunday</td>
-                <td class="scores__location">Hove</td>
-                <td class="winner">Stags</td>
-                <td class="winner">6</td>
-                <td>2</td>
-                <td>Foxes</td>
-              </tr>
-              
-            </tbody>
-          </table>
-        </section>
+  <!-- loads the Udacity Feedback extension -->
+  <meta name="udacity-grader" content="http://udacity.github.io/responsive-images/project/project-grader.json" unit-tests="http://udacity.github.io/responsive-images/project/project-grader.js">
 
-        <section class="weather">
-          <span class="weather__location">Brighton, UK</span>
-          <span class="weather__desc">Sunny</span>
-          <span class="weather__today">
-          <img class="weather__today__image" src="images/weather.png" alt="icon of a partially cloudy day"><span class="weather__today__temp">13</span><span class="weather__today__deg">&deg;C</span>
-          </span>
-          <ul class="weather__next">
-            <li class="weather__next__item">
-              <span>Mon</span>
-              <img class="weather__next__image" src="images/sunny.png" alt="icon of a sunny day">
-              <span>13 &deg;C</span>
-            </li><li class="weather__next__item">
-              <span>Tues</span>
-              <img class="weather__next__image" src="images/cloudy.png" alt="icon of a cloudy day">
-              <span>13 &deg;C</span>
-            </li><li class="weather__next__item">
-              <span>Wed</span>
-              <img class="weather__next__image" src="images/cloudy.png" alt="icon of a cloudy day">
-              <span>13 &deg;C</span>
-            </li><li class="weather__next__item">
-              <span>Thu</span>
-              <img class="weather__next__image" src="images/rain.png" alt="icon of a rainy day">
-              <span>13 &deg;C</span>
-            </li><li class="weather__next__item">
-              <span>Fri</span>
-              <img class="weather__next__image" src="images/sunny.png" alt="icon of a sunny day">
-              <span>13 &deg;C</span>
-            </li>
-          </ul>
-        </section>
+</head>
 
-        <section class="news recent-news">
-          <h2 class="news__title">Latest news <a href="#" class="news__more">+ more</a></h2>
-          <ul>
-            <li class="snippet">
-              <h3 class="snippet__title"><a href="#">Gastropub distillery Marfa farm-to-table</a></h3>
-              <div class="snippet__thumbnail">
-                <img src='images/dog_small.jpg' alt="picture of a girl with a large, stuffed dog toy">
-              </div>
-              <p class="snippet__description">Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.
-              Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.
-              </p>
-            </li>
-            <li class="snippet">
-              <div class="snippet__thumbnail">
-                <img src='images/dog_small.jpg' alt="picture of a girl with a large, stuffed dog toy">
-              </div>
-              <h3 class="snippet__title"><a href="#">Organic raw keffiyeh four loko.</a></h3>
-              <p class="snippet__description">Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice loko.
-              </p>
-            </li>
-            <li class="snippet">
-              <div class="snippet__thumbnail">
-                <img src='images/dog_small.jpg' alt="picture of a girl with a large, stuffed dog toy">
-              </div>
-              <h3 class="snippet__title"><a href="#">Kickstarter art party cronut scenester.</a></h3>
-              <p class="snippet__description">Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.
-              Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.Vice keffiyeh four loko.
-              </p>
-            </li>
-            <li class="snippet">
-              <div class="snippet__thumbnail">
-                <img src='images/dog_small.jpg' alt="picture of a girl with a large, stuffed dog toy">
-              </div>
-              <h3 class="snippet__title"><a href="#">Squid lomo Kickstarter art party cronut </a></h3>
-              <p class="snippet__description">Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.
-              Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four loko.Vice keffiyeh four loko.
-              </p>
-            </li>
-          </ul>
-        </section>
-      </section>
-      <footer>
-        <ul>
-          <li><a href="#">Contact us</a></li>
-          <li><a href="#">Follow us on Twitter</a></li>
-          <li><a href="#">RSS</a></li>
-        </ul>
-      </footer>
-    </main>
-    <script>
-      /*
-       * Open the drawer when the menu ison is clicked.
-       */
-      var menu = document.querySelector('#menu');
-      var main = document.querySelector('main');
-      var drawer = document.querySelector('.nav');
+<body>
 
-      menu.addEventListener('click', function(e) {
-        drawer.classList.toggle('open');
-        e.stopPropagation();
-      });
-      main.addEventListener('click', function() {
-        drawer.classList.remove('open');
-      });
+  <h1>My responsive blog</h1>
 
-    </script>
-  </body>
+  <article>
+
+    <img src="images/still_life-1600_large_2x.jpg">
+
+    <h2>My story</h2>
+
+    <p>I love cheese, especially manchego swiss. <img src="images_src/fixed/smiley_face.png"> Fromage queso jarlsberg cheesy feet emmental cottage cheese camembert de normandie bocconcini. Cottage cheese everyone loves cauliflower cheese rubber cheese squirty cheese halloumi cow fondue. Bocconcini cheese and biscuits everyone loves fondue red leicester st. agur blue cheese rubber cheese ricotta. Cheesy grin mozzarella.</p>
+    
+    <figure>
+      <img src="images/horses-1600_large_2x.jpg">
+      <figcaption>Horses in Hawaii</figcaption>
+    </figure>
+    
+    <p>Bocconcini swiss cut the cheese. Manchego boursin smelly cheese cheesy grin squirty cheese mozzarella cheddar hard cheese. Manchego roquefort camembert de normandie cheese slices mascarpone cow cheesy feet airedale. Port-salut jarlsberg gouda port-salut port-salut cheese on toast.</p>
+    
+    <p>Manchego cheese strings hard cheese. Say cheese swiss cheese strings squirty cheese mozzarella feta the big cheese halloumi. Cheddar cheese and biscuits cut the cheese queso hard cheese red leicester parmesan st. agur blue cheese. Smelly cheese caerphilly hard cheese cream cheese cream cheese the big cheese feta squirty cheese. Babybel fromage edam lancashire.</p>
+    
+    <figure>
+      <img src="images/volt-1600_large_2x.jpg">
+      <figcaption>Sign in an old Berlin power station</figcaption>
+    </figure>
+    
+    <p>Edam parmesan smelly cheese. Dolcelatte say cheese cheesy feet lancashire cow boursin stinking bishop brie. Stilton cheese strings say cheese pecorino cheeseburger fromage frais cauliflower cheese manchego. St. agur blue cheese ricotta stinking bishop queso camembert de normandie manchego cheese triangles fondue. Gouda.</p>
+    
+    <figure>
+      <img src="images/cockatoos-1600_large_2x.jpg">
+      <figcaption>Cockatoos</figcaption>
+    </figure>
+    
+    <p>Babybel cream cheese cheese on toast. Brie fromage swiss cheese and biscuits hard cheese babybel bocconcini brie. Cheesy grin swiss cheese strings paneer lancashire cauliflower cheese cheese on toast caerphilly. Queso queso cheese and wine taleggio mascarpone cheeseburger.</p>
+    
+    <p>Rubber cheese lancashire stinking bishop. Paneer bocconcini bocconcini melted cheese brie blue castello mascarpone when the cheese comes out everybody's happy. Mozzarella st. agur blue cheese hard cheese smelly cheese gouda ricotta hard cheese cheese and wine. Fromage frais pecorino airedale caerphilly danish fontina everyone loves.</p>
+    
+    <p>Cheddar the big cheese fromage frais. Stinking bishop dolcelatte cow pecorino who moved my cheese bavarian bergkase cheese slices who moved my cheese. Cheeseburger roquefort cheese and biscuits queso queso smelly cheese roquefort red leicester. Fromage squirty cheese macaroni cheese melted cheese stilton roquefort cheese and biscuits.</p>
+    
+    <p>St. agur blue cheese cheese and wine say cheese. Goat cottage cheese brie cheese triangles say cheese when the cheese comes out everybody's happy stinking bishop dolcelatte. Parmesan say cheese cream cheese goat cauliflower cheese st. agur blue cheese cheese slices hard cheese. Cheese triangles.</p>
+    
+    <figure>
+      <img src="images/postcard-1600_large_2x.jpg">
+      <figcaption>French postcard from 25 November 1914</figcaption>
+    </figure>
+    
+    <p>Pecorino pepper jack cheesy feet. Smelly cheese cauliflower cheese fromage halloumi cream cheese who moved my cheese fromage fondue. Feta danish fontina cheesy grin mozzarella fromage cheesy grin airedale paneer. Cheddar halloumi cheese and biscuits jarlsberg cheese and biscuits cheese and biscuits squirty cheese.</p>
+    
+    <figure>
+      <img src="images/grasshopper-1600_large_2x.jpg">
+      <figcaption>Grasshopper on an Akubra hat</figcaption>
+    </figure>
+    
+    <p>Babybel cream cheese cheese on toast. Brie fromage swiss cheese and biscuits hard cheese babybel bocconcini brie. Cheesy grin swiss cheese strings paneer lancashire cauliflower cheese cheese on toast caerphilly. Queso queso cheese and wine taleggio mascarpone cheeseburger.</p>
+    
+    <figure>
+      <img src="images/sfo-1600_large_2x.jpg">
+      <figcaption>Near SFO</figcaption>
+    </figure>
+    
+    <p>Say cheese swiss cheesy grin. Cheese on toast queso bocconcini cheeseburger fondue manchego smelly cheese port-salut. Cream cheese cheese and wine airedale cheeseburger chalk and cheese cauliflower cheese fondue smelly cheese. Queso manchego.</p>
+    
+    <figure>
+      <img src="images/rosella-1600_large_2x.jpg">
+      <figcaption>Australian rosella</figcaption>
+    </figure>
+
+    <p>Paneer st. agur blue cheese bocconcini. The big cheese chalk and cheese cheese and biscuits cream cheese cheese triangles mascarpone everyone loves rubber cheese. Stinking bishop manchego the big cheese lancashire hard cheese the big cheese danish fontina squirty cheese. Cheesy feet croque monsieur boursin squirty cheese cheddar boursin boursin pepper jack. Squirty cheese halloumi camembert de normandie macaroni cheese.</p>
+  
+  </article>
+
+  <img style="max-width: 100%" src="images_src/fixed/flourish.png">
+  <!--
+  Flourish credit: http://pixabay.com/en/flourish-line-border-decoration-31609/
+  -->
+
+  <br>
+  <a href="//github.com/udacity/responsive-images/tree/master/project/start" title="View source for this page on GitHub" id="viewSource">View source on GitHub</a>
+
+  </article>
+
+</body>
 </html>
