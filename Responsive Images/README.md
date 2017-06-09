@@ -14,7 +14,7 @@
     img {
         margin-right: 10px;
         max-width: 426px;
-        width: calc((100% - 10px)/2);    
+        width: calc((100% - 10px)/2);
     }
     img:last-of-type {
         margin-right: 0;
@@ -27,7 +27,7 @@
 * 100vw -- 100% view port width
 * 100vmin -- 100% view port whichever is smaller
 * 100vmax -- 100% view port whichever is bigger
-    
+
     :+1: Setting both the height and the width to 100vmax or 100vmin changes the
     image's aspect ratio? It'll compress your images to squares, so be careful if you want to maintain a different aspect ratio!
 
@@ -81,7 +81,54 @@
 * Files used in scripting examples:
 * Image processing tools:
 
+### Increase the performance under HTTP1
 
+To get websites to load in an acceptable time using HTTP1 we have developed a series of techniques; hacks really; to eke performance out of this old protocol. They are:
 
+*   Spriting: taking multiple images, combining them into one image, and using CSS to only show part of that image in a particular place.
+*   Concatenating: Taking multiple CSS or JS files and sticking them into one large file.
+*   Serving assets from a cookie-less domain.
+*   Sharding: creating different domains or sub-domains to host assets like images.
 
+### Why HTTP2 is better
 
+HTTP2 makes the cost of multiple requests far less because of a number of techniques it does itself.
+
+*   It can leave the connection open for re-use for very extended periods of time, so there's no need for that costly handshake that HTTP1 requires for every request.
+*   HTTP2 also uses compression, unlike HTTP1, and so the size of the request is significantly smaller - and thus faster.
+*   HTTP2 multiplexes; it can send and receive multiple things at the same time over one connection.
+
+>The long and short of it is; when you build a front-end to a website, and you know it's going to be served over HTTP2 - you need to ensure you're not using legacy HTTP1 performance techniques that are going to harm the site under HTTP2.
+
+### Get used to the Unicode
+
+```html
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+    <!-- or Hello symbol 𝄞-->
+    <h1> Hello symbol &#119070;
+</h1>
+</body>
+</html>
+```
+
+### Inlining Images With SVG And Data URIs
+To reduce the HTTP requests
+
+### Project 2 nodes
+1.  add Unicode ☺
+    *   copy and paste find them online
+2.  replace the footer
+3.  add Social media icon
+    *   add header finle
+    ```html
+    <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=zocial" />
+    ```
+    *   apply the class
+    ```html
+          <a href="https://twitter.com/home?status=https://github.com/udacity/responsive-images" class="zocial-twitter">Twitter</a>
+    ```
+4.  Add a responsive logo (SVG)
