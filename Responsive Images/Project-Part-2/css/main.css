@@ -73,3 +73,11 @@ header:hover svg#logo {
   -webkit-filter: drop-shadow(3px 3px 3px #ddd);
   filter: drop-shadow(3px 3px 3px #ddd);
 }
+
+/* Same CSS as above, plus */
+
+[data-icon]:before {
+  font-family: icons; /* BYO icon font, mapped smartly */
+  content: attr(data-icon);
+  speak: none; /* Not to be trusted, but hey. */
+}
