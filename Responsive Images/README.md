@@ -129,6 +129,95 @@ To reduce the HTTP requests
     ```
     *   apply the class
     ```html
-          <a href="https://twitter.com/home?status=https://github.com/udacity/responsive-images" class="zocial-twitter">Twitter</a>
+    <a href="https://twitter.com/home?status=https://github.com/udacity/responsive-images" class="zocial-twitter">Twitter</a>
     ```
 4.  Add a responsive logo (SVG)
+
+### All about images
+
+***Pro tip:*** to get the maximum bang-for-your-buck when optimizing your site,
+focus on very large images. Pick the ten largest!
+
+In particular, resizing images in CSS or HTML can be a huge problem for big images. For example: you need a 1000x1000px image file to display in a 500x500px img element on a 2x screen. If you use a 1100x1100px image, that's 100 x 100 = 10,000 wasted pixels!
+
+
+* For background images, use image-set with the appropriate fallbacks for
+browsers that don't support it.
+* For content images, use a srcset polyfill, or fallback to using image-set 
+* For situations where you're willing to sacrifice image quality, consider using
+heavily compressed 2x images.
+
+
+### Use Srcset to solve the size problem
+
+In JavaScript you can get the source of an **img** element with **currentSrc**.
+
+The **sizes** attribute gives the browser information about the display size of
+an image element – it does not actually cause the image to be resized. That's done in CSS!
+
+```html
+<img  src="images/great_pic_800.jpg"
+      sizes="(max-width: 400px) 100vw, (min-width: 401px) 50vw"
+      srcset="images/great_pic_400.jpg 400w, images/great_pic_800.jpg 800w"
+      alt="great picture">
+```
+
+* ##### Reacting to Device Pixel Ratio
+
+```html
+<img src="image_2x.jpg" srcset="image_2x.jpg 2x, image_1x.jpg 1x" alt="a cool image">
+```
+
+* ##### Reacting to Image Width
+
+```html
+<img src="image_200.jpg" srcset="image_200.jpg 200w, image_100.jpg 100w" alt="a cool image">
+```
+
+* ##### The Picture Element
+
+The browser would first choose the webp source, and if the browser doesn't
+support this format, it would go down to the source list and select the ones
+that it would support. Note that the webp is quite large since it's
+lossless which means high-quality pictures
+
+```html
+<picture>
+    <source srcset="kittens.webp" type="image/webp">
+    <source srcset="kittens.jpg" type="image/jpeg">
+    <img src="kittens.jpg" alt="Two grey tabby kittens">
+</picture>
+```
+
+  * [Picture element: art direction](http://udacity.github.io/responsive-images/examples/3-08/pictureArtDirection/)
+  * [Picture element: with srcset and media queries](http://udacity.github.io/responsive-images/examples/3-08/pictureFullMonty)
+  * [Picturefill polyfill](http://udacity.github.io/responsive-images/examples/3-08/picturefill)
+
+<br>
+
+* ##### The Picture Element Cont...
+
+With the addition of <picture>, the sizes attribute can be applied to both <img> and <source> elements:
+
+```html
+<picture>
+  <source media="(min-width: 800px)"
+          sizes="80vw"
+          srcset="lighthouse-landscape-640.jpg 640w,
+                  lighthouse-landscape-1280.jpg 1280w,
+                  lighthouse-landscape-2560.jpg 2560w">
+  <img src="lighthouse-160.jpg" alt="lighthouse"
+       sizes="80vw"
+       srcset="lighthouse-160.jpg 160w,
+               lighthouse-320.jpg 320w,
+               lighthouse-640.jpg 640w,
+               lighthouse-1280.jpg 1280w">
+</picture>
+```
+
+### General advice about alt attributes :sparkles:
+
+*   **alt** attributes should be descriptive for important images, like this
+body surfer. Because body surfing is important, I guess.
+*   **alt** attributes should be empty for images that are just decorations, like this boiler image. Do you get the joke? It's a boiler to represent boiler plate code, which is sometimes empty of content.
+*   **alt** attributes should be set on every image, just like this pig is set on being so darn cute.
