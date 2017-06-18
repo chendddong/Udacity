@@ -10,6 +10,7 @@ This is empty on purpose! Your code to build the resume will go here.
 // $("#main").append(funToughts);
 // s = s.slice(1);
 // s = s.replace("u","U");
+//
 var bio = {
     "name" : "Peter Chen",
     "role" : "Web Developer",
@@ -113,8 +114,8 @@ $("#header").append(formattedSkill_start);
 $("#skills-h3").append(formattedSkills);
 
 // $("#workExperience").append(formattedWorkStart);
-// $("#workExperience").append(formattedEmployer);
-// $("#workExperience").append(formattedTitle);
+// // $("#workExperience").append(formattedEmployer);
+// // $("#workExperience").append(formattedTitle);
 // $("#workExperience").append(formattedDates);
 // $("#workExperience").append(formattedWorkLocation);
 // $("#workExperience").append(formattedDescription);
