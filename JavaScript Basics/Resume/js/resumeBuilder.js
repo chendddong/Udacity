@@ -1,6 +1,7 @@
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
+
 // var name = "Peter";
 // var awesomeToughts = "I am " + name + " and I am awesome";
 // // .replace([old],[new]);
@@ -91,32 +92,11 @@ This is empty on purpose! Your code to build the resume will go here.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+
+
 ///////////////////////////////////////////////
 // Four 4 Objects bio work project education //
 ///////////////////////////////////////////////
-
-
-/*
-
-Resume Sections Requirements:
-
-work
-work contains an array of jobs. Each object in the jobs array should contain an employer, title, location, dates worked and description strings.
-
-projects
-projects contains an array of projects. Each object in the projects array should contain title, dates and description strings, and an images array with URL strings for project images.
-
-bio
-bio contains name, role, welcomeMessage, and biopic strings, contacts object and
-skills array of skill strings. The contacts object should contain a mobile number, email address, gitHub user name, twitter handle and location. The twitter property is optional.
-
-education
-education contains an array of schools. Each object in the schools array contains name, location, degree dates and URL strings, and majors array of major strings.
-
-education also contains an onlineCourses array. Each object in the onlineCourses array should contain a title, school, dates and URL strings.
-
-*/
-
 
 ////////////////
 // bio Object //
@@ -126,9 +106,9 @@ var bio = {
     "name" : "Peter Chen",
     "role" : "Web Developer",
     "welcome_msg" : "Stay Hungry, Stay foolish",
-    "pic_url" : "images/me.jpg", 
-       
-    "contact_info" : {
+    "pic_url" : "images/me.jpg",
+
+    "contacts" : {
         "mobile" : "9088017841",
         "email" : "pcchen@gmail.com",
         "twitter" : "twitter.com/peter_butter1",
@@ -138,6 +118,7 @@ var bio = {
     },
 
     "skills" : ["Java", "C", "Python", "Web development", "Data Structures & Algorithms", "Machine Learning", "Data Analysis", "Anomaly Detection"]
+
 }
 
 
@@ -154,7 +135,7 @@ var work = {
             "title" : "Teaching Assistant",
             "dates" : "2016 Fall",
             "location" : "Albany",
-            "description" : "Taught students algorithms concepts; Design questions and labs."
+            "description" : "\u2022 Taught students algorithms concepts;<br />\u2022 Designed questions and labs."
         },
 
         {
@@ -162,16 +143,16 @@ var work = {
             "title" : "Developer (Intern)",
             "dates" : "2015 Summer",
             "location" : "Beijing",
-            "description" : "Assisted the software team by testing the device’s (Mr.Water) WIFI connection and improved code using VB to count link failures;Participated the design and development of the Mr.Water’s monitoring website."
+            "description" : "\u2022 Assisted the software team by testing the device’s (Mr.Water) WIFI connection and improved code using VB to count link failures;<br /> \u2022 Participated the design and development of the Mr.Water’s monitoring website."
         },
 
         {
             "employer" : "China Central Television Business Channel",
             "title" : "Reporter And Editor",
-            "dates" : "June 2012, June 2015",
+            "dates" : "June 2012 - June 2015",
             "location" : "Beijing",
-            "description" : "Mainly responsible for the interviews, editing, and broadcast of technological news; Wrote and edited many press releases with depth related to political, economic and cultural; Participated in producing the documentary films."
-        }       
+            "description" : "\u2022 Mainly responsible for the interviews, editing, and broadcast of technological news;<br /> \u2022 Wrote and edited many press releases with depth related to political, economic and cultural;<br /> \u2022 Participated in producing the documentary films."
+        }
     ]
 
 }
@@ -190,7 +171,7 @@ var education = {
             "url" : "http://albany.edu",
             "major": ["CS", "Statistics"],
 
-            "online-course": 
+            "online-course":
             [
                 {
                     "title" : "Machine Learning Specialization",
@@ -228,7 +209,7 @@ var education = {
             "dates": "2012-06-17",
             "location": "Beijing, China",
             "major": ["Journalism"],
-            "online-course": 
+            "online-course":
             [
                 {
                     "title" : "Java Developer",
@@ -236,44 +217,122 @@ var education = {
                     "dates" : "2015 Summer",
                     "url" : "http://www.beidaqingniao.org/index.html"
                 }
-            
+
             ]
         }
 
     ]
 }
 
-
 ////////////////////
 // Project Object //
 ////////////////////
 
-
-
-
-var project = {
+var projects = {
 
     "projects":
     [
         {
-            "title": "Page_Rank",
+            "title": "Page Rank",
             "dates": "2017 Winter",
             "description": "Implemented page rank algorithm by using the data set from wiki, which is utilized by Google Search",
-            "image": "images/project_2"
+            "images": ["images/197x148.gif", "images/197x148.gif"]
         },
 
         {
             "title": "AI.DJ",
             "dates": "2016 Spring",
             "description": "Recommend songs to users based on Users thumbs ups and downs",
-            "image": ["images/project_1"]
+            "images": ["images/197x148.gif", "images/197x148.gif"]
         },
 
         {
             "title": "DocHub",
             "dates": "2015 Winter",
             "description": "Designed, built, deployed an online web application called DocHub which is aimed to help patients and doctors schedule appointments 7x24.",
-            "image": ["images/project_2"]
+            "images": ["images/197x148.gif", "images/197x148.gif"]
         }
     ]
 }
+
+
+///////////////////////////////////////////////////////
+
+
+
+/////////////////
+// Bio Session //
+/////////////////
+
+///////////////////////
+// Education Section //
+///////////////////////
+
+//////////////////////
+// Working Session  //
+//////////////////////
+
+function displayWork() {
+    $("#workExperience").append(HTMLworkStart);
+    for (key in work.work){
+        if (work.work.hasOwnProperty(key)) {
+            var employerHTML = HTMLworkEmployer.replace("%data%", work.work[key].employer);
+            $(".work-entry:last").append(employerHTML);
+
+            var titleHTML = HTMLworkTitle.replace("%data%", work.work[key].title);
+            $("a:last").append(titleHTML);
+
+            var datesHTML = HTMLworkDates.replace("%data%", work.work[key].dates);
+            $(".work-entry:last").append(datesHTML);
+
+            var locationHTML = HTMLworkLocation.replace("%data%", work.work
+                [key].location);
+            $(".work-entry:last").append(locationHTML);
+
+            var descriptionHTML = HTMLworkDescription.replace("%data%", work.work
+                [key].description);
+            $(".work-entry:last").append(descriptionHTML);
+        }
+    }
+
+}
+displayWork();
+
+
+//////////////////////
+// Projects section //
+//////////////////////
+
+projects.display = function() {
+    $("#projects").append(HTMLprojectStart);
+    for (key in projects.projects){
+        if (projects.projects.hasOwnProperty(key)) {
+
+            var titleHTML = HTMLprojectTitle.replace("%data%", projects.projects[key].title);
+            $(".project-entry:last").append(titleHTML);
+
+            var datesHTML = HTMLprojectDates.replace("%data%", projects.projects[key].dates);
+            $(".project-entry:last").append(datesHTML);
+
+            var descriptionHTML = HTMLprojectDescription.replace("%data%", projects.projects[key].description);
+            $(".project-entry:last").append(descriptionHTML);
+
+            if (projects.projects[key].images.length > 0) {
+                for (image in projects.projects[key].images) {
+                    var imagesHTML = HTMLprojectImage.replace("%data%",projects.projects
+                        [key].images[image]);
+                    $(".project-entry:last").append(imagesHTML);
+                }
+            }
+        }
+    }
+}
+projects.display();
+
+/////////////////
+// Map Section //
+/////////////////
+
+$("#mapDiv").append(googleMap);
+// $(document).load(initializeMap());
+

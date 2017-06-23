@@ -167,3 +167,151 @@ Like the last one, this is bad form too. [] already have a specific purpose in J
 **bracket notation**: true
 
 Dot notation fails to work if the property starts with a number. This is also bad form. Properties should never start with numbers.
+
+
+## Lesson 5
+
+### For-In Loops
+
+Clarification
+
+Use forEach or for to iterate over arrays like:
+
+    countries = ['Argentina', 'China', 'England'];
+
+Use for-in to loop over objects like:
+
+    countries = {'country1':'Argentina', 'country2':'China','country3':'England'};
+
+being careful to wrap the content of the for-in in a conditional statement that tests if the key is part of the object:
+
+```JavaScript
+myObj = {'country1':'Germany', 'country2':'Argentina'};
+for (key in myObj){
+    if (myObj.hasOwnProperty(key)) {
+        console.log(myObj[key]);
+    }
+}
+```
+
+### jQury (:last)
+
+The :last jQuery selector returns the final element in a list that matches
+whatever precedes it. So for work-entry:last, if there are 3 work-entry
+elements, it will only return the 3rd one. Example:
+
+```HTML
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("p:last").css("background-color", "yellow");
+});
+</script>
+</head>
+<body>
+
+<p>This is the first paragraph.</p>
+<p>This is the second paragraph.</p>
+<p>This is the last paragraph.</p>
+
+</body>
+</html>
+```
+
+### Collecting Click Locations
+
+```JavaScript
+$(document).click(function(loc) {
+    var x = loc.pageX;
+    var y = loc.pageY;
+
+    logClicks(x, y);
+});
+```
+
+##### $(document).click()
+$(document).click() is a jQuery event handler on the page, which is a fancy way of saying that it will hold some code that runs every time a user clicks on the page. The function (that doesn't have a name, making it an anonymous function) that gets passed into .click() will be run every time a user clicks on the page.
+
+##### loc
+loc is a jQuery event object that contains information about the click event. Learn about event's properties with jQuery's documentation.
+
+### Return Statements
+
+```JavaScript
+var work = {
+  "jobs": [
+    {
+      "employer": "Udacity",
+      "title": "Course Developer",
+      "location": "Mountain View, CA",
+      "dates": "Feb 2014 - Current",
+      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
+    },
+    {
+      "employer": "LearnBIG",
+      "title": "Software Engineer",
+      "location": "Seattle, WA",
+      "dates": "May 2013 - Jan 2014",
+      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
+    },
+    {
+      "employer": "LEAD Academy Charter High School",
+      "title": "Science Teacher",
+      "location": "Nashville, TN",
+      "dates": "Jul 2012 - May 2013",
+      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
+    },
+    {
+      "employer": "Stratford High School",
+      "title": "Science Teacher",
+      "location": "Nashville, TN",
+      "dates": "Jun 2009 - Jun 2012",
+      "description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes out everybody's happy airedale ricotta cheese and wine paneer camembert de normandie. Swiss mozzarella cheese slices feta fromage frais airedale swiss cheesecake. Hard cheese blue castello halloumi parmesan say cheese stinking bishop jarlsberg."
+    }
+  ]
+};
+
+function locationizer(work_obj) {
+    var locations = [];
+    for (job in work.jobs) {
+        var singleLocation = work["jobs"][job].location;
+        locations.push(singleLocation);
+    }
+    return locations;
+}
+
+console.log(locationizer(work));
+
+```
+
+### International Name format
+
+"Peter Chen" -> "Peter CHEN"
+
+```JavaScript
+function inName(name) {
+    name = name.trim().split(" ");
+    console.log(name);
+    name[1] = name[1].toUpperCase();
+    name[0] = name[0].slice(0,1).toUpperCase() +
+              name[0].slice(1).toLowerCase();
+
+    return name[0] + " " + name[1];
+}
+```
+
+### JavaScript Anonymous functions
+
+Anonymous functions are functions that don't have a name and are often returned
+by other functions and objects. Example:
+
+```JavaScript
+$.getJSON("test.json", function(data) {
+    console.log(data);
+});
+```
+
+# Show the rest of the portfolio
