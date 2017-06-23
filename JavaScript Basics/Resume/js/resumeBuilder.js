@@ -95,13 +95,11 @@ This is empty on purpose! Your code to build the resume will go here.
 // Four 4 Objects bio work project education //
 ///////////////////////////////////////////////
 
-///////////////////////
-// Revise this later //
-///////////////////////
 
 /*
 
-Resume Sections:
+Resume Sections Requirements:
+
 work
 work contains an array of jobs. Each object in the jobs array should contain an employer, title, location, dates worked and description strings.
 
@@ -109,12 +107,13 @@ projects
 projects contains an array of projects. Each object in the projects array should contain title, dates and description strings, and an images array with URL strings for project images.
 
 bio
-bio contains name, role, welcomeMessage, and biopic strings, contacts object and skills array of skill strings. The contacts object should contain a mobile number, email address, github username, twitter handle and location. The twitter property is optional.
+bio contains name, role, welcomeMessage, and biopic strings, contacts object and
+skills array of skill strings. The contacts object should contain a mobile number, email address, gitHub user name, twitter handle and location. The twitter property is optional.
 
 education
-education contains an array of schools. Each object in the schools array contains name, location, degree dates and url strings, and amajors array of major strings.
+education contains an array of schools. Each object in the schools array contains name, location, degree dates and URL strings, and majors array of major strings.
 
-education also contains an onlineCourses array. Each object in the onlineCourses array should contain a title, school, dates and url strings.
+education also contains an onlineCourses array. Each object in the onlineCourses array should contain a title, school, dates and URL strings.
 
 */
 
@@ -126,15 +125,19 @@ education also contains an onlineCourses array. Each object in the onlineCourses
 var bio = {
     "name" : "Peter Chen",
     "role" : "Web Developer",
-    "contact_info" : ["9088017841",
-                      "pcchen@gmail.com",
-                      "twitter.com/peter_butter1",
-                      "github.com/chendddong",
-                      "dcyou.tech.blog",
-                      "Princeton, NJ, 08540"],
-    "pic_url" : "images/me.jpg",
     "welcome_msg" : "Stay Hungry, Stay foolish",
-    "skills" : ["Java" , "Web development", "Algorithms", "Machine Learning", "Data Analysis", "Anomaly Detection"]
+    "pic_url" : "images/me.jpg", 
+       
+    "contact_info" : {
+        "mobile" : "9088017841",
+        "email" : "pcchen@gmail.com",
+        "twitter" : "twitter.com/peter_butter1",
+        "github" : "github.com/chendddong",
+        "blog" : "dcyou.tech.blog",
+        "location" : "Princeton, NJ, 08540"
+    },
+
+    "skills" : ["Java", "C", "Python", "Web development", "Data Structures & Algorithms", "Machine Learning", "Data Analysis", "Anomaly Detection"]
 }
 
 
@@ -151,15 +154,27 @@ var work = {
             "title" : "Teaching Assistant",
             "dates" : "2016 Fall",
             "location" : "Albany",
-            "description" : "Explained classic algorithms concepts to students."
-        }
+            "description" : "Taught students algorithms concepts; Design questions and labs."
+        },
 
+        {
+            "employer" : "Diwinet Technologies",
+            "title" : "Developer (Intern)",
+            "dates" : "2015 Summer",
+            "location" : "Beijing",
+            "description" : "Assisted the software team by testing the device’s (Mr.Water) WIFI connection and improved code using VB to count link failures;Participated the design and development of the Mr.Water’s monitoring website."
+        },
 
+        {
+            "employer" : "China Central Television Business Channel",
+            "title" : "Reporter And Editor",
+            "dates" : "June 2012, June 2015",
+            "location" : "Beijing",
+            "description" : "Mainly responsible for the interviews, editing, and broadcast of technological news; Wrote and edited many press releases with depth related to political, economic and cultural; Participated in producing the documentary films."
+        }       
     ]
 
 }
-
-// JSON valid
 
 ///////////////////////
 // Education Object! //
@@ -172,16 +187,57 @@ var education = {
             "degree": "Master of Science",
             "dates": "2017-05-17",
             "location": "Albany, NY, 12222",
+            "url" : "http://albany.edu",
             "major": ["CS", "Statistics"],
-            "online-course": ["Coursera", "Udacity", "OSSU"]
+
+            "online-course": 
+            [
+                {
+                    "title" : "Machine Learning Specialization",
+                    "school" : "University of Washington on Coursera",
+                    "dates" : "2016 Fall - 2017 Winter",
+                    "url" : "https://www.coursera.org/account/accomplishments/specialization/certificate/3LHXHNAQC4QK"
+                },
+
+                {
+                    "title" : "Full Stack Web Developer Nanodegree",
+                    "school" : "Udacity",
+                    "dates" : "2017 Spring till now",
+                    "url" : "https://github.com/chendddong/Udacity"
+                },
+
+                {
+                    "title" : "Front End Development Certification",
+                    "school" : "freeCodeCamp",
+                    "dates" : "2017 Spring till now",
+                    "url" : "https://www.freecodecamp.com/chendddong"
+                },
+
+                {
+                    "title" : "A Self-taught Education",
+                    "school" : "OSSU",
+                    "dates" : "2017 Spring till now",
+                    "url" : "https://github.com/chendddong/OSSU"
+                }
+            ]
         },
+
         {
             "school_name": "CUC",
             "degree": "BA",
             "dates": "2012-06-17",
             "location": "Beijing, China",
-            "major": ["EBA"],
-            "online-course": ["BPCS"]
+            "major": ["Journalism"],
+            "online-course": 
+            [
+                {
+                    "title" : "Java Developer",
+                    "school" : "Beida Jade Bird",
+                    "dates" : "2015 Summer",
+                    "url" : "http://www.beidaqingniao.org/index.html"
+                }
+            
+            ]
         }
 
     ]
@@ -192,24 +248,32 @@ var education = {
 // Project Object //
 ////////////////////
 
+
+
+
 var project = {
 
     "projects":
     [
         {
-            "title": "AI.DJ",
-            "dates": "2016 Spring",
-            "description": "Recommend songs to users based on Users thumbs ups and downs",
-            "image": "images/project_1"
+            "title": "Page_Rank",
+            "dates": "2017 Winter",
+            "description": "Implemented page rank algorithm by using the data set from wiki, which is utilized by Google Search",
+            "image": "images/project_2"
         },
 
         {
-            "title": "Page_Rank",
-            "dates": "2017 Spring",
-            "description": "Implemented page rank algorithm by using the data set from wiki, which is utilized by Google Search",
-            "image": "images/project_2"
-        }
+            "title": "AI.DJ",
+            "dates": "2016 Spring",
+            "description": "Recommend songs to users based on Users thumbs ups and downs",
+            "image": ["images/project_1"]
+        },
 
+        {
+            "title": "DocHub",
+            "dates": "2015 Winter",
+            "description": "Designed, built, deployed an online web application called DocHub which is aimed to help patients and doctors schedule appointments 7x24.",
+            "image": ["images/project_2"]
+        }
     ]
 }
-
